@@ -107,7 +107,13 @@ In the first step, soil specimens were made were different binder recipes. To en
 
 To investigate how five different binders work individually and in combination with each other, we used different approaches. A common method is to lock all the parameters except the one that is varied. This is repeated with the next parameter iteratively. Although this method is conventionally used, but the it includes some drawbacks as well. First, the interaction effects and the second-order effects between different components are missed in the final evaluation of the soil strength. These interactions can be both positive and negative, i.e., missed interaction and interpretation of the results regarding safety issues. Therefore, the methodology of our study considered more effective approaches, such as simplex-lattice design, while evaluating the results.
 
-As an alternative to the above, there is the response surface method. The methodology means that all the variables that affect the process (eg strength) are varied according to a special scheme. In a factorial trial, the amount of binder is varied either according to low and high admixture or low, medium and high admixture depending on whether the second order effects are to be taken into account. The method is very effective because few attempts provide enough data. Another advantage is that different binder levels are evaluated. The disadvantage is that in the specimens with high levels of several binders, the content becomes very high which affect the results. A simple illustration with only two binders is shown in Figure 1.
+As an alternative to the above, there is the response surface method. The methodology means that all the variables that affect the process (eg strength) are varied according to a special scheme. In a factorial trial, the amount of binder is varied either according to low and high admixture or low, medium and high admixture depending on whether the second order effects are to be taken into account. The method is very effective because few attempts provide enough data. Another advantage is that different binder levels are evaluated. The disadvantage is that in the specimens with high levels of several binders, the content becomes very high which affect the results. A simple illustration with only two binders is shown in Figure \ref{fig1}.
+
+\begin{figure}[H]
+\centering
+	\includegraphics[width=12.0 cm]{Fig_01.jpg}
+\caption{Experimental design scheme. Left: 3x2 factor experiment for evaluation of the effects of binders on soil strength. Right: Schematic image of a "mixture design" with three factors; A, B and C. The experimental setup is called simplex-lattice (3x2). Figure source: authors. \label{fig1}}
+\end{figure}  
 
 \subsection{General workflow}
 
@@ -132,12 +138,42 @@ Parts of the above points take place iteratively and some parts also take place 
 	The methodology consists in optimization of soil stabilization. The goal was to assess soil strength as a crucial criterion of safety for sustainable road construction. 
 
 \subsection{Manufacturing soil specimens}
-	The specimens were manufactured in a special packing equipment that is designed to pack stabilized fine-grained moraine (Lindh, 2004). When packing the specimens, separation was observed in raw soil material. During the preparation of the samples, all possible precautionary measures were taken to minimize separation, but despite this, a certain separation occurred. The effect varied between the different binders. The energy and bio ashes showed more separation compared to the others. The separation of the specimen can be seen in Figure 2. Here Figure 2 (left) shows the bottom surface of a packed specimen. It shows an underfilled material, i.e., there is too little fine material between the coarser particles. Figure 2 (right) shows the upper surface of the wrapped specimen. 
+	The specimens were manufactured in a special packing equipment that is designed to pack stabilized fine-grained moraine (Lindh, 2004). When packing the specimens, separation was observed in raw soil material. During the preparation of the samples, all possible precautionary measures were taken to minimize separation, but despite this, a certain separation occurred. The effect varied between the different binders. The energy and bio ashes showed more separation compared to the others. The separation of the specimen can be seen in Figure \ref{fig2}. Here Figure \ref{fig2} (left) shows the bottom surface of a packed specimen. It shows an underfilled material, i.e., there is too little fine material between the coarser particles. Figure \ref{fig2} (right) shows the upper surface of the wrapped specimen. 
+	
+\begin{figure}[H]
+\centering
+	\includegraphics[width=12.0 cm]{Fig_02.jpg}
+\caption{Specimen soil samples. Left: the lower surface of a stabilized specimen. Right: the upper surface of a stabilized specimen. Figure source: authors. \label{fig1}}
+\end{figure}   
+
 	This figure shows the overfilled soil specimen, which means that it includes excessive amount of the fine material. This results in that fact that coarser particles have no direct contact with each other which directly affects its cohesion properties important.  
 
-\subsection{Subsection}
-\subsection{Subsection}
+\subsection{Soil stabilization by binders}
+Samples were stabilized by binders with cement, cement / slag and lime / slag. The general aim was to increase soil resistance to freeze-thaw cycles, provided that there is no continuous water penetration on the road. In the freeze-thaw experiments, no extra water was added. The equipment was originally developed to compress the fine-grained moraines that have been stabilized. The equipment worked very well for road base applications. For compression of the stabilized base course gravel, the equipment works satisfactorily, but the problems with pore structures must be taken into account for fine-grained soils. During the compaction it is important to reduce the separation and to obtain a gap between the soil layers. Optionally, specimens can be made in two layers.
 
+The selected binder recipes used for soil stabilization were based on the previous experience and together with statistical trial planning, the significance level of the results was ensured. The choice of binder was limited to five different variants. The two binder types include traditional binders (cement and lime) and three binders are alternative novel types (slag GGBFS, energy ash and bio ash). The ashes can also be counted in the category of residual products. The total amount of binder was chosen so that they would be representative for road stabilization. In a road context, a compressive strength of soil of around 4 MPa is quite common and acceptable. Cement was used as a reference binder, as it is well documented for soil stabilization. Furthermore, the goal was that stabilized test specimens reach compressive strength of 4 MPa. 
+
+\subsection{Seismic measurements of P-wave velocity on day 14th}
+After collecting and refining, the specimens were stored for 90 days. During this storage period, the resonant frequency measurements (free-free resonate column) were performed on the soil specimens using existing methods described earlier (Thomas and Rangaswamy, 2022; Ryden et al. 2006; Lindh and Lemenkova, 2021b, 2022c; Aldaood et al. 2021). The seismic measurements in this study were performed after storage of the specimens on day 14th. The paraffin on the end faces was removed at the actual measurement and then the end faces were resealed. The measurements according to this method were repeated. In the measurements, both axial values (compression wave) and radial values (shear wave) were measured. The radial measurements gave a large scattering in values caused by the low strength of specimens and performance outside of plastic tube.
+
+\subsection{Statistical analysis}
+After the completion of previous steps, the statistical analysis was used for objective data quality control, as data might be subject to errors in course of the experiment. In the initial phase, previous experiences from literature and own experience are compiled. Based on this, a small test series is performed before the final test series is determined. Statistical hypothesis testing is used here.  The null hypothesis ($H_0$) in this case is that all the binders give the same strength and the alternative hypothesis that they do not give the same strength. Two different errors can be made when testing hypotheses:
+
+\begin{equation}
+	\alpha = P (type I wrong) = P(reject H_0 | H_0 is true)
+\end{equation}
+
+\begin{equation}
+	\beta = P (type II wrong) = P(fails to reject H_0 | H_0 is false)
+\end{equation}
+
+where $\alpha$ is usually called the significance level of the test. In this case, $\alpha = 0.05 $  has been used. This means a 5\% probability that $H_0$ will be rejected even though $H_0$ is true. 
+
+\subsection{Simplex-lattice design}
+A mixture design called simplex-lattice was selected for the experimental setup. A simplex-lattice design can be made according to a square model or a special cubic model.  For a simplex-lattice design with three factors, the square model can be described by the following equations:
+
+\subsection{Freeze-thaw attempts}
+The freeze-thaw experiments were performed according to SS-EN 137244. During the  freeze-thaw experiment according to the workflow of the method, soil specimens were frozen for a total of 56 cycles. The amount of flaking material was measured on days 7, 14, 28, 42 and 56. The temperature varied as shown in Figure 3 and kept within the black field showing data variations. No extra water was added during the cycles.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Results}
