@@ -1,0 +1,183 @@
+%  LaTeX support: latex@mdpi.com 
+%  For support, please attach all files needed for compiling as well as the log file, and specify your operating system, LaTeX version, and LaTeX editor.
+
+%=================================================================
+\documentclass[constrmater,article,submit,pdftex,moreauthors]{Definitions/mdpi} 
+
+% MDPI internal commands
+\firstpage{1} 
+\makeatletter 
+\setcounter{page}{\@firstpage} 
+\makeatother
+\pubvolume{1}
+\issuenum{1}
+\articlenumber{0}
+\pubyear{2023}
+\copyrightyear{2023}
+%\externaleditor{Academic Editor: Firstname Lastname}
+\datereceived{19 January 2023} 
+%\daterevised{} % Only for the journal Acoustics
+\dateaccepted{} 
+\datepublished{} 
+\hreflink{https://doi.org/} % If needed use \linebreak
+%\doinum{}
+
+%=================================================================
+% Add packages and commands here. The following packages are loaded in our class file: fontenc, inputenc, calc, indentfirst, fancyhdr, graphicx, epstopdf, lastpage, ifthen, lineno, float, amsmath, setspace, enumitem, mathpazo, booktabs, titlesec, etoolbox, tabto, xcolor, soul, multirow, microtype, tikz, totcount, changepage, attrib, upgreek, cleveref, amsthm, hyphenat, natbib, hyperref, footmisc, url, geometry, newfloat, caption
+
+\graphicspath{{figures/}} % path to folder with figures
+\usepackage{subcaption}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{gensymb} % for \textdegree
+\usepackage{tabularx}
+
+%=================================================================
+% Full title of the paper (Capitalized)
+\Title{Geotechnical properties of soil stabilized with blended binders for sustainable road base applications}
+
+% MDPI internal command: Title for citation in the left column
+\TitleCitation{Geotechnical properties of soil stabilized with blended binders for sustainable road base applications}
+
+% Author Orchid ID: enter ID or remove command
+\newcommand{\orcidauthorA}{0000-0002-0577-9936} % Per Add \orcidA{} behind the author's name
+\newcommand{\orcidauthorB}{0000-0002-5759-1089} % Polina Add \orcidB{} behind the author's name
+
+% Authors, for the paper (add full first names)
+\Author{Per Lindh $^{1}$,$^{2}$*\orcidA{} and Polina Lemenkova $^{3}$\orcidB{}}
+
+%\longauthorlist{yes}
+
+% MDPI internal command: Authors, for metadata in PDF
+\AuthorNames{Per Lindh and Polina Lemenkova}
+
+% MDPI internal command: Authors, for citation in the left column
+\AuthorCitation{Lindh, P.; Lemenkova, P.}
+% If this is a Chicago style journal: Lastname, Firstname, Firstname Lastname, and Firstname Lastname.
+
+% Affiliations / Addresses (Add [1] after \address if there is only one affiliation.)
+\address{%
+$^{1}$ \quad Department of Investments Technology and Environment, Swedish Transport Administration, Neptunigatan 52, Box 366, 201 23 Malmö, Sweden. Tel.: +46-0771-921-921. Email: per.lindh@trafikverket.se \\
+$^{2}$ \quad Division of Building Materials, Department of Building and Environmental Technology, Lunds Tekniska Högskola LTH (Faculty of Engineering), Lund University, Box 118, SE-221-00, Lund, Sweden. Email: per.lindh@byggtek.lth.se\\
+$^{3}$ \quad Laboratory of Image Synthesis and Analysis (LISA), École polytechnique de Bruxelles (Brussels Faculty of Engineering), Université Libre de Bruxelles (ULB). Building L, Campus du Solbosch, ULB -- LISA CP165/57, Avenue Franklin D. Roosevelt 50, Brussels 1050, Belgium. Email: polina.lemenkova@ulb.be
+}
+
+% Contact information of the corresponding author
+\corres{Correspondence: polina.lemenkova@ulb.be; Tel.: +32 471 86 04 59 (P.L.)}
+
+% Current address and/or shared authorship
+%\firstnote{Current address: Affiliation 3.} 
+
+% Abstract (Do not insert blank lines, i.e. \\) 
+\abstract{This study aimed at evaluating the effect of blended binders on the stabilization of clayey soils intended for use as road and pavement materials in selected regions of Sweden. The stabilization potential of blended binders containing five stabilisers (cement, bio fly ash, energy fly ash, slag and lime) was investigated using laboratory tests and statistical analysis. Soil samples were compacted using Swedish Standards on UCS. The specimens were stabilized with blended mixtures containing various ratios of five binders. The effects of changed ratio of binders on soil strength was analysed using velocities of seismic P-waves penetrating the tested soil samples on the day 14th of the experiment. The difference in the soil surface response indicated variations in strength in the evaluated specimens. We tested combination of blended binders to improve the stabilization of clayey soil. The mix of slag / lime or slag / cement accelerated soil hardening process and gave durable soil product. We noted that pure lime (burnt or quenched) is best suited for the fine-grained soils containing clay minerals. Slag used in this study had a very finely ground structure and had hydraulic properties (hardens under water) without activation. Therefore, slag has a too slow curing process for it to be practical to use in real projects on stabilization of roads. The best performance on soil stabilization was demonstrated by blended binders consisted of lime / fly ash / cement which considerably improved the geotechnical properties and workability of soil and increased its strength. We conclude that bearing capacities of soil intended for road construction can be significantly improved by stabilization using mixed binders, compared to pure binders (cement).}
+
+% Keywords
+\keyword{keyword 1; keyword 2; keyword 3; keyword 4; keyword 5; keyword 6; keyword 7; keyword 8; keyword 9; keyword 10} 
+
+% The fields PACS, MSC, and JEL may be left empty or commented out if not applicable
+%\PACS{J0101}
+%\MSC{}
+%\JEL{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\section{Introduction}
+
+Using binders to improve the properties of soil is necessary for road construction. As a result of stabilization by additives binders (such as cement, lime, fly ash, slag) soil obtains improved workability and better engineering characteristics and geotechnical properties, which are crucial for road construction: increased compressive strength,  flexion strength, porosity, density and dynamic modulus (Caraşca, 2016). Northern environmental and climate conditions of Sweden have their effects on urban infrastructure (Gustavsson et al. 2001; Amorim et al. 2020). Specifically, stabilized soil should be more resistant to freeze-thaw cycles and fatigue cracking, which is important for transport network safety in cold regions. 
+
+Previous studies have indicated that the addition of various stabilizing agents improved the workability of soils (Etim et al. 2020; Fasihnikoutalab et al. 2020; Kogbara et al. 2011; Lindh and Lemenkova, 2022b; Mavroulidou et al. 2021). For instance, adding cement improved the strength and bearing capacities of soils (Ekpo et al. 2021), and adding lime caused strength gain in tested soil specimens (Frempong, 1995). This suggests the possibility that the experimental addition of various stabilising agents can even more improve soil characteristics. In existing studies (Abbey et al. 2021; Jafer et al. 2018; Al-Hdabi et al. 2014; Li et al. 2021 Wang et al. 2015), the addition of various blended binders to soil caused a significant gain in strength.
+
+Much has been written on the improved properties of soil after adding various binders as stabilizers. (Consoli et al. 2015) reports that the addition of cement to the soft soils fastens acquiring strength results. (Higgins, 2007) reports that Ground Granulated Blast Furnace Slag (GGBFS) can be effectively used as a replacement of Portland cement in civil engineering and construction works due to its high geotechnical quality and environmental sustainability. The long-term trend of the improvement of properties of the subgrade soils stabilized by fly ash was analysed for several decades and reported by Parsons and Kneebone (2005). Soil chemically stabilized with blends of cement and fly ash demonstrated improved characteristics in Unconfined Compressive Strength (UCS) and split tensile strength tests, as demonstrated by Olgun (2015). He also mentioned the increased shrinkage limit and crack reduction in soil samples.
+
+Following the long-term research on soil stabilization for road constructions and transport engineering (Markwick and Keep, 1942; Glossop and Wilson, 1953; Bjerrum and Flodin, 1960; Nelson and Miller, 1992; Sear, 2001; Celauro et al. 2012; Olsen et al. 2022), our study contributes to these investigations with a special aim to evaluate the effects of blended binders (slag, cement, lime, energy fly ash and bio fly ash) on soil stabilization to increase safety and durability of roads. Specifically, the study evaluated the opportunities to increase soil properties for sustainable road base by using mixed binders. The blended binders have different properties in terms of the reaction period with binders and curing time. A mixed binder can contribute to a better and more durable end product, that is, stabilized soil used for road pavement. The project goal is to test how different components in binder interact during soil stabilization and increase the stability and safety of roads. The targeted improvements of soil specimens include strength growth, final strength and durability of the stabilized soil in roads, which are the requirements for transport safety.
+
+Clays are fine grained weak soil that change in volume due to fluctuations in water content and weather conditions (Sudhakar et al. 2021). Therefore, such types of soil should be stabilized prior to road construction to increase the strength and stability of road and transportation safety. There are many binder types used for stabilization of weak soil and reported for road construction cases (Antunes et al. 2017; Park et al. 2020). Portland cement and lime are the traditional binders in stabilization contexts where the lime needs clay mineral or air (CO2) for a hardening process to take place (Bell, 1995; Taylor, 1997; Hilt and Davidson, 1960; Lindh, and Lemenkova, 2021a). 
+
+Our study continues the research on improvement the geotechnical properties of soil with the addition of binders, which has been observed in multiple previous publications (Nordmark et al. 2022; Sörengård et al. 2021; Al-Swaidani et al. 2016; Feng et al. 2021; Maheepala et al. 2022). These and other works result from the need of the improved soil properties in transport infrastructure, which can be achieved by the treatment of soils with stabilising agents. Positive results of increasing soil strength after soil stabilization treatment with the addition of various binders are demonstrated in these papers. 
+
+Improved geotechnical properties of soil ensure high engineering characteristics and safety of roads. The economic effects from the stabilized soil has direct economic advantages in road construction industry: higher material stability, decreased erosion, reduced road maintenance and construction costs, ensured safety in transport network. All these factors finally contribute to the societal development and well-being.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Materials and Methods}
+
+\subsection{Subsection}
+
+\subsection{Subsection}
+
+\subsection{Subsection}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Results}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Discussion}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Conclusions}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\authorcontributions{Supervision, conceptualization, methodology, software, resources, funding acquisition, and project administration, P.L.; writing---original draft preparation, methodology, software, data curation, visualization, formal analysis, validation, writing---review and editing, and investigation, P.L. All authors have read and agreed to the published version of the manuscript.}
+
+\funding{The publication was funded by the Editorial Office of XXXX, Multidisciplinary Digital Publishing Institute (MDPI), by providing 100\% discount for the APC of this manuscript. }
+
+\institutionalreview{Not applicable.}
+
+\informedconsent{Not applicable.}
+
+\dataavailability{Not applicable} 
+
+\acknowledgments{The authors thank the anonymous reviewers of Land for reading, suggestions and comments that improved an earlier version of this manuscript.}
+
+\conflictsofinterest{The authors declare no conflict of interest.} 
+
+\abbreviations{Abbreviations}{
+The following abbreviations are used in this manuscript:\\
+
+\noindent 
+\begin{tabular}{@{}ll}
+MDPI & Multidisciplinary Digital Publishing Institute\\
+DOAJ & Directory of open access journals\\
+LD & Linear dichroism
+\end{tabular}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Optional
+\appendixtitles{no} % Leave argument "no" if all appendix headings stay EMPTY (then no dot is printed after "Appendix A"). If the appendix sections contain a heading then change the argument to "yes".
+\appendixstart
+\appendix
+\section[\appendixname~\thesection]{}
+\subsection[\appendixname~\thesubsection]{}
+The appendix is an optional section that can contain details and data supplemental to the main text---for example, explanations of experimental details that would disrupt the flow of the main text but nonetheless remain crucial to understanding and reproducing the research shown; figures of replicates for experiments of which representative data are shown in the main text can be added here if brief, or as Supplementary Data. Mathematical proofs of results not central to the paper can be added as an appendix.
+
+\begin{table}[H] 
+\caption{This is a table caption.\label{tab5}}
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+\begin{tabularx}{\textwidth}{CCC}
+\toprule
+\textbf{Title 1}	& \textbf{Title 2}	& \textbf{Title 3}\\
+\midrule
+Entry 1		& Data			& Data\\
+Entry 2		& Data			& Data\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section[\appendixname~\thesection]{}
+All appendix sections must be cited in the main text. In the appendices, Figures, Tables, etc. should be labeled, starting with ``A''---e.g., Figure A1, Figure A2, etc.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{adjustwidth}{-\extralength}{0cm}
+%\printendnotes[custom] % Un-comment to print a list of endnotes
+
+\reftitle{References}
+
+%=====================================
+% References, variant A: external bibliography
+%=====================================
+\bibliography{Bibliography.bib}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{adjustwidth}
+\end{document}
