@@ -1,0 +1,319 @@
+%  LaTeX support: latex@mdpi.com 
+%  For support, please attach all files needed for compiling as well as the log file, and specify your operating system, LaTeX version, and LaTeX editor.
+
+%=================================================================
+\documentclass[constrmater,article,submit,pdftex,moreauthors]{Definitions/mdpi} 
+
+% MDPI internal commands
+\firstpage{1} 
+\makeatletter 
+\setcounter{page}{\@firstpage} 
+\makeatother
+\pubvolume{1}
+\issuenum{1}
+\articlenumber{0}
+\pubyear{2023}
+\copyrightyear{2023}
+%\externaleditor{Academic Editor: Firstname Lastname}
+\datereceived{19 January 2023} 
+\daterevised{5 March 2023}
+\dateaccepted{} 
+\datepublished{} 
+\hreflink{https://doi.org/} % If needed use \linebreak
+%\doinum{}
+
+%=================================================================
+% Add packages and commands here. The following packages are loaded in our class file: fontenc, inputenc, calc, indentfirst, fancyhdr, graphicx, epstopdf, lastpage, ifthen, lineno, float, amsmath, setspace, enumitem, mathpazo, booktabs, titlesec, etoolbox, tabto, xcolor, soul, multirow, microtype, tikz, totcount, changepage, attrib, upgreek, cleveref, amsthm, hyphenat, natbib, hyperref, footmisc, url, geometry, newfloat, caption
+
+\graphicspath{{figures/}} % path to folder with figures
+\usepackage{subcaption}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{gensymb} % for \textdegree
+\usepackage{tabularx}
+
+%=================================================================
+% Full title of the paper (Capitalized)
+\Title{Geotechnical Properties of Soil Stabilized with Blended Binders for Sustainable Road Base Applications}
+
+% MDPI internal command: Title for citation in the left column
+\TitleCitation{Geotechnical Properties of Soil Stabilized with Blended Binders for Sustainable Road Base Applications}
+
+% Author Orchid ID: enter ID or remove command
+\newcommand{\orcidauthorA}{0000-0002-0577-9936} % Per Add \orcidA{} behind the author's name
+\newcommand{\orcidauthorB}{0000-0002-5759-1089} % Polina Add \orcidB{} behind the author's name
+
+% Authors, for the paper (add full first names)
+\Author{Per Lindh $^{1}$,$^{2}$*\orcidA{} and Polina Lemenkova $^{3}$\orcidB{}}
+
+%\longauthorlist{yes}
+
+% MDPI internal command: Authors, for metadata in PDF
+\AuthorNames{Per Lindh and Polina Lemenkova}
+
+% MDPI internal command: Authors, for citation in the left column
+\AuthorCitation{Lindh, P.; Lemenkova, P.}
+% If this is a Chicago style journal: Lastname, Firstname, Firstname Lastname, and Firstname Lastname.
+
+% Affiliations / Addresses (Add [1] after \address if there is only one affiliation.)
+\address{%
+$^{1}$ \quad Department of Investments Technology and Environment, Swedish Transport Administration, Neptunigatan 52, Box 366, 201 23 Malmö, Sweden. Tel.: +46-0771-921-921. Email: per.lindh@trafikverket.se \\
+$^{2}$ \quad Division of Building Materials, Department of Building and Environmental Technology, Lunds Tekniska Högskola LTH (Faculty of Engineering), Lund University, Box 118, SE-221-00, Lund, Sweden. Email: per.lindh@byggtek.lth.se\\
+$^{3}$ \quad Laboratory of Image Synthesis and Analysis (LISA), École polytechnique de Bruxelles (Brussels Faculty of Engineering), Université Libre de Bruxelles (ULB). Building L, Campus du Solbosch, ULB -- LISA CP165/57, Avenue Franklin D. Roosevelt 50, Brussels 1050, Belgium. Email: polina.lemenkova@ulb.be
+}
+
+% Contact information of the corresponding author
+\corres{Correspondence: polina.lemenkova@ulb.be; Tel.: +32 471 86 04 59 (P.L.)}
+
+% Current address and/or shared authorship
+%\firstnote{Current address: Affiliation 3.} 
+
+% Abstract (Do not insert blank lines, i.e. \\) 
+\abstract{This study aimed at evaluating the effect of blended binders on the stabilization of clayey soils intended for use as road and pavement materials in selected regions of Sweden. The stabilization potential of blended binders containing five stabilisers (cement, bio fly ash, energy fly ash, slag and lime) was investigated using laboratory tests and statistical analysis. Soil samples were compacted using Swedish Standards on UCS. The specimens were stabilized with blended mixtures containing various ratios of five binders. The effects of changed ratio of binders on soil strength was analysed using velocities of seismic P-waves penetrating the tested soil samples on the day 14th of the experiment. The difference in the soil surface response indicated variations in strength in the evaluated specimens. We tested combination of blended binders to improve the stabilization of clayey soil. The mix of slag / lime or slag / cement accelerated soil hardening process and gave durable soil product. We noted that pure lime (burnt or quenched) is best suited for the fine-grained soils containing clay minerals. Slag used in this study had a very finely ground structure and had hydraulic properties (hardens under water) without activation. Therefore, slag has a too slow curing process for it to be practical to use in real projects on stabilization of roads. The best performance on soil stabilization was demonstrated by blended binders consisted of lime / fly ash / cement which considerably improved the geotechnical properties and workability of soil and increased its strength. We conclude that bearing capacities of soil intended for road construction can be significantly improved by stabilization using mixed binders, compared to pure binders (cement).}
+
+% Keywords
+\keyword{Soil Strength; Binders; Road Pavements; Soil Strength; Recycling Technologies; Materials Science; Engineering; Civil Engineering; Construction; Compressive Strength; Soil Stabilization} 
+
+% The fields PACS, MSC, and JEL may be left empty or commented out if not applicable
+\PACS{81.40.Cd; 81.40.Ef; 62.20.Qp; 83.50.Xa; 45.70.Mg; 92.40.Lg; 81.40.Lm; 62.20.M–}
+\MSC{76Axx; 74Exx; 74Fxx}
+\JEL{Q00; Q01; Q24; Q55; Q56}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\section{Introduction}
+
+\hl{Selecting binders for soil stabilization is a widely recognised problem in civil engineering where one tries to find a proper type and percentage of stabilizing agents to improve soil properties} \cite{Consoli2019,daRocha,Freitag}. \hl{For instance, }using binders to improve the properties of soil is necessary for road construction. As a result of stabilization by additives\hl{, }such as cement, lime, fly ash, slag\hl{, }soil obtains improved workability and better engineering characteristics and geotechnical properties\hl{. These }are crucial for road construction \hl{due to the} increased compressive strength, flexion strength, porosity, density and dynamic modulus \cite{Carasca}. \hl{Many existing methods, like} \cite{Mypati,Sargent}, \hl{deal with various binders and evaluate their effects on stabilization of various types of soil. Specifically, for} Sweden \hl{with its }northern environmental and climate conditions \hl{stabilization of expansive soil is crucial due to the strong} effects on urban infrastructure \citep{Amorim,Gustavsson}. \hl{For instance}, stabilized soil should be more resistant to freeze-thaw cycles and fatigue cracking, which is important for transport network safety in cold regions. 
+
+Previous studies have indicated that the addition of various stabilizing agents improved the workability of soils \citep{Etim,Fasihnikoutalab,Kogbara,Lindh2022b,Mavroulidou}. For instance, adding cement \hl{improves} the strength and bearing capacities of soils \cite{Ekpo}, \hl{while} adding lime \hl{contributes to gain in} strength in tested soil specimens \cite{Frempong}. This suggests the possibility that the experimental addition of various stabilising agents can even more improve soil characteristics. \hl{Contrary to these methods, it was proposed recently to use mixtures of diverse combinations of blended binders. Thus, }in existing studies \citep{Abbey,AlHdabi,ma15217798,Jafer,Lietal2021,Wangetal2015} \hl{experimented with} the addition of\hl{ }blended binders to soil \hl{which }caused a significant gain in strength.
+
+Much has been written on the improved properties of soil after adding various binders as stabilizers. \cite{Consoli} reports that the addition of cement to the soft soils fastens acquiring strength results; \cite{MESKINI2021129161} \hl{mentioned stabilizing effect of fly ash and lime additives on strength and durability of soil through neutralizing acidity;} \cite{Mirkovic} \hl{tested wearing course asphalt mixtures made with various percentages of fly ash and reported satisfactory volumetric composition which can be achieved by adding fly ash into soil mixture, improved bulk density and filled voids of the composed mineral and asphalt mixture;} \cite{app12189134} \hl{improved the mechanical behavior of an asphalt mixture using the alternative aggregate boiler coke ash, an element that originates in nickel processing. Further,} \cite{Lima} \hl{evaluated the feasibility of using  mud and fly ash residues to produce asphalt mixtures}. 
+
+Previous studies report\hl{ }\cite{Higgins,electronics11223726} that \hl{the }Ground Granulated Blast Furnace Slag (GGBFS) can be effectively used as a replacement of Portland cement in civil engineering and construction \hl{engineering }works due to its high geotechnical quality and environmental sustainability. \hl{Further, }the long-term trend of the improvement of properties of the subgrade soils stabilized by fly ash was analysed for several decades and reported in recent studies \cite{Parsons}. Soil chemically stabilized with blends of cement and fly ash demonstrated improved characteristics in\hl{the }Unconfined Compressive Strength (UCS) and split tensile strength tests, as demonstrated in previous studies that also mentioned the increased shrinkage limit and crack reduction in soil samples \cite{Olgun}.
+
+Following the long-term research on soil stabilization for road constructions and transport engineering \citep{Bjerrum,Celauro,Glossop,Markwick,Nelson,Olsenetal2022,Sear}, our study contributes to these investigations with a special aim \hl{at evaluating} the effects of blended binders\hl{, such as }slag, cement, lime, energy fly ash and bio fly ash\hl{, }on soil stabilization to increase safety and durability of roads. Specifically, \hl{in this paper we concentrate on presenting the mixed binders and }evaluate\hl{ their effects on the} increase \hl{of }soil properties \hl{intended as a }sustainable road base\hl{. Mixed }binder can contribute to a better and more durable end product, that is, stabilized soil used for road pavement. \hl{On the other hand,} blended binders have different properties in terms of the reaction period with \hl{soil} and curing time\hl{, which requires a special evaluation through a series of tests. In this setting one tries to tackle hardening of soil via an optimal combination of blended binders as an important problem in civil engineering and construction industry. }
+
+\hl{However, while the results presented in existing studies on blended binders and their applications in various regions with diverse soil types} \cite{Jie,Holz,Jamnongpipatkul}, \hl{are consistent with those obtained by other works on effective methods of soil stabilization} \cite{Moh}, \hl{it is still unclear how these methods behave when used in specific conditions of Sweden with low winter temperatures and high technical requirements for soil and road specifications. As a response to such needs, the goal of this study }is to test how different components in binders\hl{ in binder blends }interact during soil stabilization and increase the stability and safety of roads\hl{ depending on proportions and ratio with regard to water content}. The target\hl{ }improvements of soil specimens include \hl{gain in }strength\hl{, resistivity} and durability of the stabilized soil in roads, \hl{as basic }requirements for transport safety.
+
+\hl{To illustrate the practical importance of the blended binders for Swedish soils, we apply it to real tested clayey soil types collected from the sample area in southern Sweden. }Clay\hl{ is a }fine-grained weak soil that \hl{tends to }change in volume due to \hl{the }fluctuations in water content \hl{under diverse }weather conditions \cite{Sudhakar}. Therefore, such type\hl{ }of soil should be stabilized prior to road construction to increase the strength and stability of road and transportation safety. There are many binder types used for stabilization of weak soil and reported for road construction cases \citep{Antunes,Park}. Portland cement and lime are the traditional binders in stabilization contexts where the lime needs clay mineral or air ($CO_2$) for a hardening process to take place \citep{Bell,Hilt,LindhLemenkovaCEE,Taylor}. \hl{Some previous paper on stabilization of clays already exploited the importance and diverse effects of binders on clays} \cite{Okagbue,Estabragh,Xu}. \hl{However, we can extent this for clays collected in southern Sweden and detect the effects from the percentage of various binders on hardening of clayey soil while trying to statistically balance the ratio of binders in a mixture.}
+
+\hl{Aimed at developing a unified data-driven framework of clayey soil stabilization by blended binders, }our study continues the research on improvement \hl{its} geotechnical properties\hl{ }which has been observed in multiple previous publications \citep{Sorengard,AlSwaidani,Feng,LindhLemenkovaECES,Maheepala,Lindh2022NL,Nordmark}. These and other works result from the need of the improved soil properties\hl{ with the addition of binders }in transport infrastructure, which can be achieved by the treatment of soils with stabilising agents. Positive results of increasing \hl{gain in }strength \hl{upon} stabilization\hl{ }with the addition of various binders are demonstrated in these papers. \hl{The goal of this survey is to provide a series of tests aimed at improving the }geotechnical properties of soil\hl{. The objective is to }ensure high engineering characteristics and safety of roads and sustainability of pavements. The economic effects from the stabilized soil has direct economic advantages in road construction industry such as higher material stability, decreased erosion, reduced road maintenance and construction costs, ensured safety in transport network to mention a few \hl{of them}. All these factors \hl{together} significantly contribute to the societal development and a well-being of the society.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Materials and Methods}
+
+\subsection{Implementation of the experiment}
+
+\hl{The following experiments were implemented to evaluate the performance of clayey soil after stabilization with five various binders. We compared the effects from cement, bio fly ash, energy fly ash, slag and lime on the gain in strength of soil specimens evaluated using P-wave velocities.} In the first step, soil specimens were \hl{fabricated using} different binder recipes. To ensure the significance level of the results, the recipes are based on \hl{the }previous \hl{experiments} in combination with the statistical trial assessment. The statistical planning minimises the number of \hl{the }experiments that need to be performed in order to reach the desired level of significance. For five different binders, 100 test soil specimens were manufactured. These specimens were stored for\hl{ }90 days to achieve a final strength even for the slow-curing components. During the storage period, the speed of the compression wave and\hl{ }shear wave have been measured in the material \hl{samples }at different times \hl{to quantitatively measure the strength of soil specimens}. 
+
+To investigate how five different binders work individually and in combination with each other, we used different approaches. A common method is to \hl{keep} all the parameters \hl{constant }except \hl{for }the \hl{target }one that is varied. \hl{In our case, the target parameter was the amount of each tested binder: cement, bio fly ash, energy fly ash, slag and lime, respectively. }This is repeated with the next parameter iteratively. Although this method is conventionally used, \hl{it }includes \hl{certain} drawbacks as \hl{follows}. First, the interaction effects and the second-order effects between \hl{the }different components are missed in the final evaluation of the soil strength. These interactions can be both positive and negative, i.e., missed interaction and interpretation of the results regarding safety issues. Therefore, the methodology of our study considered more effective approaches, such as simplex-lattice design, while evaluating the results.
+
+As an alternative to the above, there is \hl{a} response surface method. \hl{The approach of the response surface method is based on the assumption }that all the variables that affect the \hl{soil strength} are varied according to a special scheme. In a factorial trial, the amount of binder is varied either according to \hl{the }low and high admixture\hl{,} or \hl{triple admixture consisting of }low, medium and high \hl{values} depending on whether the second order effects are to be taken into account. \hl{Due to such algorithm, this} method is very effective \hl{for testing large amounts of soil (e.g., hundreds of tons of the materials), }because \hl{even }few attempts provide enough data \hl{for decision making}. Another advantage \hl{of the response surface method }is that \hl{it enables to evaluate }different binder levels. The disadvantage is that in the specimens with high levels of several binders, the content becomes very high which \hl{may }affect the results. A simple illustration with only two binders is \hl{indicated} in Figure \ref{fig1}.
+
+\begin{figure}[H]
+\centering
+	\includegraphics[width=12.0 cm]{Fig_01.jpg}
+\caption{Experimental design scheme. Left: 3x2 factor experiment for evaluation of the effects of binders on soil strength. Right: Schematic image of a "mixture design" with three factors; A, B and C. The experimental setup is called simplex-lattice (3x2). \label{fig1}}
+\end{figure}  
+
+\subsection{General workflow}
+
+The design experiment of this study followed the existing guidance \cite{Montgomery1997} and includes the following points in problem formulation and solving: 
+
+\begin{itemize}
+	\item	 Identifying the factors affecting soil strength;
+	\item Defining \hl{the }amounts and \hl{the }ratio of \hl{binders} optimal for effective\hl{ }stabilization \hl{of clayey soil}; 
+	\item Identifying the environmental limits affecting \hl{the }geotechnical properties of soil;
+	\item Selecting \hl{the }response variables: cement, fly ash and lime in various ratios;
+	\item Experimental modelling and statistical approaches for \hl{the }data analysis;
+	\item Performing the experiments using \hl{the }UCS and P-wave seismic tests;
+	\item Quality control\hl{ aimed at }identifying the advantages and drawbacks of the methods.
+\end{itemize}
+
+Parts of the above \hl{steps in the methodology} take place iteratively\hl{, while others were performed }in parallel. We considered the statistical approaches in data analysis for \hl{the }experimental testing \hl{aimed at evaluating the }optimal binder amount that should be added for \hl{the best results in }soil stabilization \citep{Box}. To increase the efficiency of the experiment, statistical data processing \hl{was} applied \hl{and the outputs were visualised as }ternary diagrams and Pareto \hl{charts}. Moreover, we applied the additional points while performing \hl{the }statistical data processing \cite{Montgomery1997}: 
+
+\begin{enumerate}
+	\item	Considering \hl{the }non-statistical knowledge to the geotechnical problems related to road construction; 
+	\item Keeping the design and analysis as simple and clear as possible; 
+	\item Identifying and \hl{recognition of} the difference between \hl{the }empirical practical and theoretical statistical significance; 
+	\item Performing \hl{the }iterative series of the experiments on soil specimens. 
+\end{enumerate}	
+
+	The methodology consists in \hl{the }optimization of \hl{the process of }soil stabilization \hl{the the main }goal\hl{ }to \hl{evaluate the }soil strength as a crucial criterion of safety for sustainable road construction. 
+
+\subsection{Manufacturing soil specimens}
+	The specimens were manufactured in a special packing equipment that is designed to pack \hl{the} stabilized fine-grained moraine \cite{Lindh2004}. When packing the specimens, separation was observed in raw soil material. During the \hl{fabrication} of\hl{ }samples, all \hl{the} possible precautionary measures were taken \hl{in order} to minimise separation\hl{ of soil granula. However, }a certain separation occurred \hl{with the} effect varied \hl{depend on} different binders. The energy and bio ashes \hl{demonstrated} more separation compared to the others. The separation of the specimen can be seen in Figure \ref{fig2} \hl{which} \hl{illustrates} the bottom surface of a packed specimen \hl{on the left}. It \hl{indicates} an underfilled material \hl{with few} fine material between the coarser particles. \hl{The right part of the }Figure \ref{fig2} \hl{presents} the upper surface of the wrapped specimen. 
+	
+\begin{figure}[H]
+\centering
+	\includegraphics[width=12.0 cm]{Fig_02.jpg}
+\caption{Specimen soil samples. Left: the lower surface of a stabilized specimen. Right: the upper surface of a stabilized specimen. \label{fig2}}
+\end{figure}   
+
+This figure \hl{illustrated} the overfilled soil specimen, which means that it includes \hl{the }excessive amount of the fine material. This results in that fact that coarser particles have no direct contact with each other which\hl{ significantly }affects \hl{the} cohesion properties \hl{of soil}.  
+
+\subsection{Soil stabilization by binders}
+
+\hl{The practical }goal was that stabilized \hl{soil} specimens reach \hl{the} compressive strength of 4 MPa\hl{, since it} is\hl{ a }common and acceptable \hl{value in} road \hl{construction} context. The choice of binders\hl{ }was limited to five different variants. The two binder types include \hl{the }traditional binders (cement and lime) \hl{while the other }three binders are \hl{the} alternative novel types\hl{: }slag GGBFS, energy ash and bio ash\hl{. }Cement was used as a \hl{main }reference binder, \hl{because} it is \hl{a }well documented \hl{binder widely used }for soil stabilization. The ashes \hl{were regarded as }the \hl{binders from the }category of residual products. The total amount of binder was chosen \hl{in such a way} that they would be representative for road stabilization. The selected binder recipes used for soil stabilization were based on the previous experience\hl{. The} significance level of the results was ensured\hl{ }with statistical trial planning. 
+
+\hl{Soil} samples were stabilized\hl{ }with cement, cement \hl{and} slag\hl{, }and lime \hl{and} slag \hl{binders}. The general aim was to increase \hl{the resistance of }soil \hl{towards the }freeze-thaw cycles, provided that there is no continuous water penetration on the road. \hl{To this end, }no extra water was added\hl{ }in the freeze-thaw experiments. The equipment \hl{used in this test }was originally developed to compress the fine-grained \hl{stabilized }moraines\hl{, and it} worked\hl{ }well for road base applications. For compression of the stabilized base course gravel, the equipment works satisfactorily, but the pore structures \hl{affected its performance }for \hl{the }fine-grained soils. During the compaction\hl{, }the separation \hl{was reduced} to obtain a gap between the \hl{two }soil layers \hl{forming the} specimens.
+
+\subsection{Seismic measurements}
+After collecting and refining \hl{the soil samples}, the specimens were stored for 90 days. During this storage period, the resonant frequency measurements\hl{ }were performed on the soil specimens using existing methods described earlier \hl{as} free-free resonate column \hl{tests} \citep{Aldaood,Lindh2021b,Lindh2022c,ThomasRangaswamy,Ryden}. The seismic measurements in this study were performed \hl{as evaluation of P-wave velocity }after \hl{the }storage of the specimens on day 14th. The paraffin on the end faces was removed \hl{during} the actual measurements \hl{after which} the end faces were resealed. \hl{According} to this method\hl{, the experiments} were repeated \hl{with measured} both axial values (compression wave) and radial values (shear wave). The radial measurements gave a large scattering in values caused by the low strength of specimens and performance outside of \hl{the} plastic tube.
+
+\subsection{Statistical analysis}
+After the completion of \hl{the} previous steps, the statistical analysis was \hl{performed} for objective data quality control, as data might be \hl{a} subject to errors in course of the experiment. In the initial phase, \hl{the examples} from \hl{the existing} literature and own \hl{previous} experience are compiled. Based on this, a\hl{ }series \hl{of trial tests }is performed before the final \hl{experiment} is determined\hl{ using the }statistical hypothesis\hl{. }The null hypothesis ($H_0$) in this case is that all the binders give the same strength\hl{, while }the alternative hypothesis \hl{is} that they do not give the same strength. Two different \hl{assumptions} can be made when testing \hl{these} hypotheses \hl{represented by Equations} \ref{eq01} and \ref{eq02}:
+
+\begin{equation}\label{eq01}
+	\alpha = P (type I wrong) = P(reject H_0 | H_0 is true)
+\end{equation}
+
+\begin{equation}\label{eq02}
+	\beta = P (type II wrong) = P(fails to reject H_0 | H_0 is false)
+\end{equation}
+
+where $\alpha$ is usually called the significance level of the test. In this case, $\alpha = 0.05 $ \hl{was} used. This means\hl{ }5\% probability that $H_0$ will be rejected even though \hl{the} $H_0$ is true. 
+
+\subsection{Simplex-lattice design}
+A mixture design \hl{based on the} simplex-lattice \hl{approach} was selected for the experimental setup. A simplex-lattice design can be \hl{adjusted} according to \hl{either} a square model or a special cubic model.  For a simplex-lattice design with three factors, the square model \hl{is} described by the following \hl{Equation} \ref{eq03}\hl{:}
+
+\begin{equation}\label{eq03}
+	y = \beta _1 x_1 +  \beta _2  x_2 +  \beta _3  x_3 + \beta _{1,2} x_1 x_2 + \beta _{1,3} x_1 x_3 + \beta _{2,3} x_2 x_3 + \epsilon
+\end{equation}
+
+\hl{where $\beta$ is the coefficient of regression; $\epsilon$ is the residual error; $x_1$ is the value of binders which indicate factors; y is the dependent variable.} The cubic model can be described as follows \hl{in the Equation} \ref{eq04}\hl{:}
+
+\begin{equation}\label{eq04}
+	y = \beta _1 x_1 + \beta _2 x_2 + \beta _3 x_3 + \beta _{1,2} x_1 x_2 + \beta _{1,3} x_1 x_3 + \beta _{2,3} x_2 x_3  + \beta _{1,2,3} x_1 x_2 x_3 + \epsilon
+\end{equation}
+
+\hl{where $x_1$ is the value of binders, $\beta$ is the coefficient of regression}; y is the response area and $\epsilon$ describes the error term.  The difference between \hl{the} square and cubic model is that in the cubic model\hl{, }the cubic term $x_1 x_2 x_3$ is also determined. However, the increased resolution in the cubic model \hl{involves} a larger number of experiments \hl{which should} be performed. In this study\hl{, we defined the following parameters:} five different factors \hl{corresponding the types of five binders;} a cubic design \hl{which enables to include} an increased number of internal points and an increased proportion of points on the stripes (cf. Figure \ref{fig5}) and double trials\hl{; }the total number of specimens \hl{is} 82 \hl{soil samples}.
+
+\subsection{Freeze-thaw attempts}
+The freeze-thaw experiments were performed according to \hl{the exiting standard of }SS-EN 137244. During the freeze-thaw \hl{experiments} according to the workflow of the method, \hl{the} soil specimens were frozen for a total of 56 cycles. The amount of flaking material was measured on days 7, 14, 28, 42 and 56. The temperature varied as \hl{presented} in Figure \ref{fig3} and kept within the black field \hl{illustrating} data variations. No extra water was added during the cycles.
+
+\begin{figure}[H]
+\centering
+	\includegraphics[width=8.0 cm]{Fig_03}
+\caption{Temperature cycle for the freeze-thaw experiments. \label{fig3}}
+\end{figure} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Results}
+
+\hl{We have tested our method of soil stabilization by using several various binders in diverse combination and proportions. In this section, we show images depicting the obtained results on strength of the stabilized soil measured by P-wave velocities and visualised as ternary diagrams.} Upon the processing \hl{of the soil samples} and stabilising\hl{ }the specimens, the obtained values \hl{in strength }were \hl{evaluated} statistically\hl{ and }visualized as Pareto charts \hl{in} Figure \ref{fig4}\hl{.} \hl{From these we can see that the combination of various binders provides different characterisation on strength of soil and thus the detected effects from various binders. In this chart (Figure} \ref{fig4}), \hl{the abbreviations for the five binders are denoted by letters: A -- cement, B -- lime, C -- slag GGBFS, D -- energy fly ash, E -- bio fly ash.}
+
+\hl{Accordingly, the combinations of binders are given as follows, Figure} \ref{fig4}\hl{: BC -- lime+slag, CE -- slag+bio fly ash, AC -- cement+slag GGBFS, ABC -- cement+lime+slag (a triple combination), AE -- cement+ bio fly ash, BCE -- lime+slag GGBFS BE+bio fly ash, BDE -- lime+energy fly ash+bio fly ash, BCD -- lime+slag GGBFS+energy fly ash, ACE -- cement+slag+bio fly ash, DE -- energy fly ash+bio fly ash, and BD -- lime+energy fly ash.}
+
+\begin{figure}[H]
+\centering
+	\includegraphics[width=14.0 cm]{Fig_04}
+\caption{Left: Pareto diagram of all \hl{the} effects included in the cubic model for \hl{estimated gain in strength of} soil on day 14th. Right: Pareto diagram of the significant effects from binders on stabilized soil included in the cubic model for the measurements on day 14th. \label{fig4}}
+\end{figure} 
+
+\hl{In general, our method tend to find optimal combination of these binders with regard to the stabilization of clayey soil where specimens are selected without external and internal undesired pore structure. }The controlling parameters are the strength development of the \hl{soil }material, final \hl{gain in }strength and \hl{improved }resistance \hl{of soil to }freeze-thaw \hl{cycles}. Both \hl{the} destructive testing (uniaxial compressive strength) \hl{and }non-destructive (seismic)\hl{ }are used as the test methods. Figure \ref{fig4} \hl{presents} the significant effects after the 14 days of \hl{curing period of the stabilized soil samples}. \hl{A visual comparison of the results indicates that the proportions of }cement \hl{in a blended mixture of binders }is still \hl{a} clearly dominant factor for the compression wave velocity\hl{. We next compare the }interaction between lime and slag (a mixture of BC, as explained above)\hl{ and evaluate their }effects \hl{on soil strength. Thus, the combination }BC has increased in size and \hl{overpassed} the bio ash. 
+
+The P-wave velocity \hl{indicating} the stabilization effects on soil is \hl{demonstrated} in ternary diagrams in Figures \ref{fig5}, \ref{fig6} and \ref{fig7}. In the evaluation of the experimental results, gradual elimination of non-significant effects has been applied, i.e., the first analysis contains all the effects. Then the non-significant effects are removed until the model consists only of significant effects. The method is called ‘backward elimination’ and described by \cite{MyersMontgomery}.   Figure \ref{fig5} \hl{illustrates} the variations of P-wave velocity measured on day 14th during soil stabilization, indicating soil strength in the stabilized specimens by added various types of binders. \hl{Further, }Figure \ref{fig5} \hl{demonstrates} the effects of added cement, energy ash and lime on changed soil strength. Here the left graph \hl{displays} the increased interaction between lime and slag, while the right graph shows a lesser interaction between cement and energy ash and a larger interaction between cement and slag when stabilising soil specimens.  
+
+\begin{figure}[H]
+\centering
+	\includegraphics[width=14.0 cm]{Fig_05}
+\caption{The P-wave velocity on day 14th during soil stabilization. Left: increased interaction between lime and slag. Right: larger interaction between cement and slag. \label{fig5}}
+\end{figure} 
+
+\hl{To evaluate our results not only qualitatively, but also quantitatively, we calculate the P-wave velocities for soil samples stablized by various percentage of three binders. Figure} \ref{fig6} \hl{(left) compared our results with case of cement, lime and slag binders to those of the energy fly ash and slag binders, Figure} \ref{fig6} \hl{(right). The results containing cement are consisnently better with P-wave velocity exceeding 2700 m/s, except for the blend with high combination of the GGBFS and lime where P-wave velocity exceed 2400 m/s. In both cases the areas of the highest gain in strength are shown in red colour.} The interaction between cement and energy ash is also \hl{illustrated} in Figure \ref{fig6} (left). 
+
+Of the three different residual products, it is the slag from Merox that clearly works best. The ashes work poorly in this stabilization context. Energy ash has a well-documented effect and can harden on its own \cite{Taylor}. However, this study \hl{disclosed} that the energy fly ash does not act \hl{well }as a binder in a stabilization context \hl{of clayey soil. }One reason for the poor response from the ashes may be the low amount of binder which could be below a\hl{ }threshold value. However, a higher amount of binder would make the use of the product more expensive and currently \hl{is }not relevant from an economic perspective. In some cases, other reasons may be \hl{the control factors} and cause\hl{ which combination and types of }ashes to be \hl{selected as components for blended binders}. However, the issue of \hl{the }permanence should also be taken into account \hl{when fabricating blended mixtures. Finally, } Figure \ref{fig6} (right) \hl{also indicates} that the interaction effects between cement and energy ash are amplified. 
+
+\begin{figure}[H]
+\centering
+	\includegraphics[width=14.0 cm]{Fig_06}
+\caption{The response of the soil strength after compression indicated by the P-wave velocity measured on day 14th upon stabilization. Left: interaction between cement, lime and slag. Right: large interaction between energy fly ash and slag. \label{fig6}}
+\end{figure} 
+
+\hl{Figure} \ref{fig7} \hl{provides another comparison, completing an assessment of the soil strength after stabilization by blended mixture of cement, energy fly ash and bio fly ash binders (left) and the two types of fly ash and lime (right). Thus, }Figure \ref{fig7} (right) \hl{reveals the} interaction effects between \hl{the }fly ash and lime. Figure \ref{fig7} (left) \hl{presents} the same pattern of the effects from binders on soil stabilization: a negative contribution from the combination ADE (cement / energy ash / bio ash). \hl{Both completions indicate the low effects from the energy fly ash on soil stabilization (shown in figures in dark green colour). the strength in using ternary types of diagrams is in its ability to integrate information from triple combination of binders using for soil stabilization, as illustrated in the presented Figures }\ref{fig5}, \ref{fig6} and \ref{fig7}.
+
+\begin{figure}[H]
+\centering
+	\includegraphics[width=14.0 cm]{Fig_07}
+\caption{The response of the soil strength after compression indicated by the P-wave velocity measured on day 14th upon stabilization. Left: increased interactions between cement and fly ash. Right: increased interaction effects between fly ash and lime. \label{fig7}}
+\end{figure} 
+
+As the bio fly ash from the SCA Lilla Edet shows poorer results\hl{. This} may be due to \hl{the} carbonation of the binder, i.e., the presence of lime in ash has reacted with \hl{the} $CO_2$ in the air and inert $CaCO_3$ (cf. limestone) has been formed. \hl{Previous }studies\hl{ arrived with }a better effect from the mixture of lime and fly ash in connection with the stabilization of \hl{clayey} soil \cite{ANDAVAN20201125,TOKSOZHOZATLIOGLU2021105931,KHADKA2020100327}. There is no clear answer to the question why the energy fly ash only functions as an inert filler. One reason could be that there is a threshold value of the water binder number\hl{. }If ash is to be used in larger projects, the availability of \hl{the} 'fresh' ash \hl{(i.e., recently made product)} should be ensured to minimise \hl{possible} variations in the stabilized road base.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Discussion}
+
+In this study, we tested five different binders and their effects on stabilization of soil planned for road construction. This is a common factor test which means that we have to evaluate samples in a very large strength range. The range becomes so large that we reach far beyond what we normally describe as stabilized. Instead, we get a material that is more similar to a rolled concrete. Furthermore, the question arises as to how we should handle the water binder number\hl{. }For the ballast material selected in this study, the optimal water ratio is about 6\%. With a varied amount of binder, \hl{water binder number} will also vary. This will then vary the strength of the specimens and further complicate the evaluation. If we instead lock \hl{the water binder number}, we must vary the water ratio of the material, which in turn will vary the degree of packing of the specimens. The degree of packing then comes in as a difficult variable to evaluate the effect of the binder on the strength.
+
+The \hl{categorization} was done based on the applied geophysical methods. Thus, we measured \hl{the }frequency of \hl{the }seismic P-waves which notably varied along with changed soil properties: strength, density, stiffness and composition of soil specimens. \hl{The }results have been demonstrated on \hl{a }series of ternary diagrams and two Pareto charts for \hl{the comparative analysis}. The quality of the tests was controlled by the standard handbooks and guidances used for \hl{the }implementation of the soil tests \hl{in the} Swedish Geotechnical Institute (SGI). \hl{While our method focuses on dealing with the use of blended binders of slag, lime, energy fly ash, bio fly ash and cemen for clay stabilisation, our approach can be extended to the use of other alternative binders by adding polymers} \cite{Rezaeimalek} \hl{calcium carbide residue (CCR)} \cite{Horpibulsuk}, \hl{or experimenting with various lime dosage levels} \cite{Pedarla}. \hl{In addition, gypsum can be used for stabilization of clays to improve the microstructure specifically for the contaminated soils} \cite{Latifi}. \hl{Further, the plasticity properties of the fine-grained clayey soils can be improved by adding traditional binders such as lime and cement yet added with various content of stabilisers in a mixture} \cite{Mutaz,Rogers} \hl{or the combinations of cement and GGBFS} \cite{Andersson}.
+
+\hl{In our experiments, }the highest strengths in soil specimens were achieved for \hl{the }mixtures of slag, lime and cement, while bio fly ash from the SCA Lilla Edet \hl{demonstrated} poorer results, \hl{which} may be due to \hl{the }carbonation of the binder. The comparable \hl{gain in }strength \hl{is yielded} when used in energy fly ash which does not act sufficiently well as a binder in a stabilization context. In contrast, slag and lime outperformed the soil strength values in terms of the effects from \hl{the }blended binders on soil. Thus, \hl{a }notable increase in strength of clayey soils \hl{was} obtained by adding lime, cement and slag\hl{ }with some addition of fly ash. Following the experimental testing\hl{, }the study presented \hl{a }data analysis based on the statistical processing \hl{using} ternary\hl{ }Simplex\hl{ }diagrams for each binder combination and Pareto chart for \hl{the }comparative analysis. 
+
+\hl{A }possible disadvantage of the presented ‘mixture design’ method is that the binder content is not an independent variable, i.e., we tested the total amount of binder for each specimen, which is the same but consists of different mixtures\hl{: a }ratio of single binder components in \hl{a }binder blend\hl{. }This means that only a total binder content is tested, compared to the ordinary factorial experiment where two or three levels of binder contents \hl{were} tested. In order to treat several different levels of binder content, two or three ‘mixture tests’ must then be performed. As the study primarily focuses on examining the effects of \hl{the }akin mixture in an ordinary binder, it was chosen to perform the experiments at \hl{the }only one level (\hl{that is, }3\% mixture). Despite this \hl{limitation}, 82 different specimens were included in the experiment and tested positively, as reported above. 
+
+To address the above drawbacks, we performed the experiments with the constrained design which included \hl{the} increased amount of \hl{the }preliminary tests and a more complex evaluation \hl{of the results}. We applied the third alternative, \hl{i.e., }a mixture experiment, which is a special form of \hl{the }response surface methodology where factors are the components of the mixture and the response is a function of the proportion of each ingredient. We compared the effects from lime, slag and fly ash \hl{binders} on clay stabilization. Since this study has only included \hl{the }inert ballast and storage without \hl{the} access to air, the effects of \hl{the} lime \hl{binder were} limited. Pure lime (burnt or quenched) is best suited for the fine-grained soils containing clay minerals. Slag is usually referred to as a binder component that requires activation (high pH) to react \citep{Sherwood,Lindh2022a}. 
+
+The specific contribution of this paper consist in using blended binders. Thus, whilst a large number of projects and reported studies utilise pure binders (e.g., cement, lime, or CKD), there is a lack of knowledge regarding the use of mixed combinations of binders for stabilization of weak soils, which experimentally include novel types of binders, such as energy fly ash or bio fly ash. \hl{Therefore, we} demonstrated that blended binders are particularly effective for stabilising clayey soil in the soft composition. We used these binders in combination with cement, lime and slag for soil stabilization\hl{ where }slag used \hl{with} a very finely ground structure and\hl{ }hydraulic properties (hardens under water) without activation. Such properties have also been observed in previous studies \citep{Lindh2000,Lindh2001}. However, slag has a too slow curing process for it to be practical to use in real projects \hl{that require testing dozens of tons of materials}. Therefore, we tested the combination of \hl{the} blended binders to improve the stabilization of soil. \hl{Specifically, }the combination of slag and lime or slag and cement accelerates \hl{the process of }soil hardening and gives a good and durable product, as also noted in previous studies \cite{Lindh2021a}. Hence, this study filled in the existing research gap in studies on blended binders used for \hl{clayey }soil stabilization in road construction industry.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Conclusions}
+
+\hl{We have addressed the problem of using }blended binders \hl{which }are gaining interest in road engineering industry for soil stabilization as\hl{ }efficient materials and environmentally effective replacements to pure cement. \hl{This problem is formulated in }this paper\hl{ as optimising the selection of binders using statistical approach and a series of experiments on clay samples. The }research was undertaken to determine and demonstrate how blended binders produce a better effect on clayey soil stabilization, and to \hl{illustrate} graphically the performance of soil treated by mixtures of \hl{five} binders in various combinations: cement, lime, slag, bio fly ash and energy fly ash. The results were visualised on the ternary\hl{ }simplex\hl{ }diagrams. The soil strength increased with added blended binders in various ratios,\hl{ }detected using seismic measurements of P-wave frequency. 
+
+\hl{Below} we propose a list of further approaches to continue this study to \hl{better analyse }soil performance stabilized with various binders:
+\begin{itemize}
+	\item	Fatigue tests on stabilized material, \hl{e.g., compare with }asphalt. 
+	\item Examination of the nonlinearity of soil material (\hl{e.g., }elongation stiffness)
+	\item Testing relationship between seismic, E-modulus and strength of \hl{the }stabilized soil
+	\item Improvement of specimen production
+\end{itemize}
+
+\hl{Our empirical evaluation of using blended binders demonstrates superior performance of soil and hardening results relative to the state of the art use of single binders. Nevertheless, }the use of blended binders for soil stabilization, specifically novel types, such as energy fly ash or bio fly ash, in a challenge in the context of road improvement. The analysis of the experiments \hl{determining} the effects from various binders on soil \hl{behaviour} performed \hl{included} simplex lattice design and visualised as ternary plots\hl{. The }proposed framework aimed \hl{at describing }the relations between adding \hl{the }specific binders on \hl{improving }soil properties \hl{and hardening}. Three logical relationships between the ratio of the corresponding \hl{five }binders were categorised\hl{: }cement, lime, slag and two types of fly ash\hl{.} 
+
+\hl{This} study revealed that \hl{the }stabilization of clayey soils with blended binders consisted of lime, fly ash and cement considerably improves the geotechnical properties and workability \hl{of soil }and \hl{contributes to gain in }strength. \hl{The significance of this paper is that it also} presented a theoretical analysis of the relation between additives and soil properties as estimated by P-wave velocities \hl{indicating} the stabilization effects on soil. \hl{Further, we performed the freeze-thaw experiments for soil collected in Swedish environment and included the statistical analysis aimed at optimization of mixture design. Specifically, we have derived the results from the gain in soil strength after UCS tests for several cases of binders and compared the results in ternary plots. }The results demonstrated \hl{the }encouraging and positive effects from \hl{the use of }blended \hl{binders}, since all \hl{the stabilized }soil specimens improved the UCS, as recorded by\hl{ }the P-wave seismic testing. \hl{To conclude, the }bearing \hl{capacity} of soil \hl{was} significantly improved by \hl{the }stabilization using blended binders, which presents the effective solution for \hl{the improvement of} the engineering materials used for road constructions.
+
+\hl{The key idea of our proposed technique is to use various combinations of binder components in the triplets of mixture blends composed by various stabilizing agents. By restricting the sum of stabilizing agents always to 100\%, their single components varied in proportions, thus showing the effects of adding more of less of each type of binder on the gain in soil strength. We show that are technique, supported by statistical combinatorics, is able to assist in selecting optimal binder combinations when stabilizing large amount of materials: up to several dozens of tons of soil in the industrial scale during construction works. Our simplex-lattice design is much more efficient than the \emph{in-situ} soil stabilizing due to the computed models showing the effects of  binders on soil strength. It can be easily incorporated into diverse similar construction works where large amount of expansive soil should be stabilized by binder blends. Thus, it can be used as a valuable modelling tool for used for solutions of clay stabilization and evaluation of the degree of gain in soil strength in civil engineering.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\authorcontributions{Supervision, conceptualization, writing---original draft preparation, data curation, methodology, software, visualization, funding acquisition, and project administration, P.L. (Per Lindh); writing---original draft preparation, methodology, software, formal analysis, resources, validation, writing---review and editing, and investigation, P.L. (Polina Lemenkova) All authors have read and agreed to the published version of the manuscript.}
+
+\funding{The publication was funded by the Editorial Office of the \emph{Construction Materials}, Multidisciplinary Digital Publishing Institute (MDPI), by providing 100\% discount for the APC of this manuscript.}
+
+\institutionalreview{Not applicable.}
+
+\informedconsent{Not applicable.}
+
+\dataavailability{Not applicable} 
+
+\acknowledgments{The authors thank the anonymous reviewers for reading, suggestions and comments that improved an earlier version of this manuscript. This research was supported by the SBUF (Development Fund of the Swedish Construction Industry), Nordkalk AB, SSAB Merox AB and Svenska Cellulosa AB (SCA) Lilla Edet Pappersbruk.}
+
+\conflictsofinterest{The authors declare no conflict of interest.} 
+
+\abbreviations{Abbreviations}{
+The following abbreviations are used in this manuscript:\\
+
+\noindent 
+\begin{tabular}{@{}ll}
+GGBFS & Ground Granulated Blast Furnace Slag \\
+SGI & Swedish Geotechnical Institute \\
+UCS & Uniaxial Compressive Strength 
+\end{tabular}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{adjustwidth}{-\extralength}{0cm}
+%\printendnotes[custom] % Un-comment to print a list of endnotes
+
+\reftitle{References}
+
+%=====================================
+% References, variant A: external bibliography
+%=====================================
+\bibliography{ConstrMat.bib}
+%\nocite*{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{adjustwidth}
+\end{document}
