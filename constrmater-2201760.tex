@@ -31,6 +31,7 @@
 \usepackage{xcolor}
 \usepackage{gensymb} % for \textdegree
 \usepackage{tabularx}
+\usepackage{fixltx2e}
 \newcommand{\highlight}[1]{\colorbox{yellow}{#1}} 
 %=================================================================
 % Full title of the paper (Capitalized)
@@ -195,12 +196,12 @@ A mixture design based on the simplex-lattice approach was selected for the expe
 \begin{equation}\label{eq03}
 	y = \beta _1 x_1 +  \beta _2  x_2 +  \beta _3  x_3 + \beta _{1,2} x_1 x_2 + \beta _{1,3} x_1 x_3 + \beta _{2,3} x_2 x_3 + \epsilon
 \end{equation}
-where $\beta$ is the coefficient of regression; $\epsilon$ is the residual error; $x_1$ is the value of binders which indicate factors; \hl{y} %MDPI: Equation elements should be kept the consistent format with equation. Please check and revise. The same below.
+where $\beta$ is the coefficient of regression; $\epsilon$ is the residual error; $x_1$ is the value of binders which indicate factors; \emph{y} %MDPI: Equation elements should be kept the consistent format with equation. Please check and revise. The same below. <-- Authors' reply: corrected to italics
  is the dependent variable. The~cubic model can be described as follows in the Equation~(\ref{eq04}):
 \begin{equation}\label{eq04}
 	y = \beta _1 x_1 + \beta _2 x_2 + \beta _3 x_3 + \beta _{1,2} x_1 x_2 + \beta _{1,3} x_1 x_3 + \beta _{2,3} x_2 x_3  + \beta _{1,2,3} x_1 x_2 x_3 + \epsilon
 \end{equation}
-where $x_1$ is the value of binders, $\beta$ is the coefficient of regression; \hl{y} is the response area and $\epsilon$ describes the error term.  The~difference between the square and cubic model is that in the cubic model, the~cubic term $x_1 x_2 x_3$ is also determined. However, the~increased resolution in the cubic model involves a larger number of experiments which should be performed. In~this study, we defined the following parameters: five different factors corresponding the types of five binders; a cubic design which enables to include an increased number of internal points and an increased proportion of points on the stripes (cf. \hl{Figure~} %MDPI: Figures should be numbered in order of appearance. We detected "Figrue 5" appears before "3", please revise adnd make sure all the figures to appear in numerical order.
+where $x_1$ is the value of binders, $\beta$ is the coefficient of regression; \emph{y} is the response area and $\epsilon$ describes the error term.  The~difference between the square and cubic model is that in the cubic model, the~cubic term $x_1 x_2 x_3$ is also determined. However, the~increased resolution in the cubic model involves a larger number of experiments which should be performed. In~this study, we defined the following parameters: five different factors corresponding the types of five binders; a cubic design which enables to include an increased number of internal points and an increased proportion of points on the stripes (cf. \hl{Figure~} %MDPI: Figures should be numbered in order of appearance. We detected "Figrue 5" appears before "3", please revise and make sure all the figures to appear in numerical order.
 \ref{fig5}) and double trials; the total number of specimens is 82 soil~samples.
 
 \subsection{Freeze-Thaw~Tests}
@@ -219,7 +220,7 @@ where $x_1$ is the value of binders, $\beta$ is the coefficient of regression; \
 
 {The impact of the blended binders used for soil stabilization on the engineering properties of clayey soils was investigated with focus on the increase of strength. }We have tested {the effects of }various binders in diverse combination and proportions {on }soil stabilization{. }In this section, we show {the} results {of the improved} strength of the stabilized soil {estimated} by P-wave velocities and visualized {in} ternary diagrams. Upon~{soil stabilisation}, the~obtained values in strength were evaluated statistically and visualized as Pareto charts in Figure~\ref{fig4}. {The results show that the strength increases with curing time and added binders.} 
 
-{Diverse }combination of various binders provides different {effects} on {soil} strength {which prove the} effects from various binders. In~this chart (Figure \ref{fig4}), the~abbreviations for the five binders are denoted by letters: A--cement, B--lime, C--slag GGBFS, D--energy fly ash, E--bio fly ash. Accordingly, the~combinations of binders are given as follows, Figure~\ref{fig4}: BC\hl{--}%MDPI: We remove the space at both side of ``--'' in this paragraph. Please confirm. 
+{Diverse }combination of various binders provides different {effects} on {soil} strength {which prove the} effects from various binders. In~this chart (Figure \ref{fig4}), the~abbreviations for the five binders are denoted by letters: A--cement, B--lime, C--slag GGBFS, D--energy fly ash, E--bio fly ash. Accordingly, the~combinations of binders are given as follows, Figure~\ref{fig4}: BC--%MDPI: We remove the space at both side of ``--'' in this paragraph. Please confirm. <-- Authors' reply: yes, we confirm.
 lime+slag, CE--slag+bio fly ash, AC--cement+slag GGBFS, ABC--cement+lime+slag (a triple combination), AE--cement+ bio fly ash, BCE--lime+slag GGBFS BE+bio fly ash, BDE--lime+energy fly ash+bio fly ash, BCD--lime+slag GGBFS+energy fly ash, ACE--cement+slag+bio fly ash, DE--energy fly ash+bio fly ash, and~BD--lime+energy fly~ash.
 
 \begin{figure}[H]
@@ -264,8 +265,8 @@ Figure~\ref{fig7} provides another comparison, completing an assessment of the s
  \label{fig7}}
 \end{figure} 
 
-As the bio fly ash from the SCA Lilla Edet shows poorer results. This may be due to the carbonation of the binder, i.e.,~the presence of lime in ash has reacted with the \hl{$CO_2$} %MDPI: Please confirm if the italics is unnecessary and can be removed. The following highlights are the same.
- in the air and inert \hl{$CaCO_3$} (cf. limestone) has been formed. Previous studies arrived with a better effect from the mixture of lime and fly ash in connection with the stabilization of clayey soil~\cite{ANDAVAN20201125,TOKSOZHOZATLIOGLU2021105931,KHADKA2020100327}. There is no clear answer to the question why the energy fly ash only functions as an inert filler. One reason could be that there is a threshold value of the water binder number. If~ash is to be used in larger projects, the~availability of the 'fresh' ash (i.e., recently made product) should be ensured to minimize possible variations in the stabilized road~base.
+As the bio fly ash from the SCA Lilla Edet shows poorer results. This may be due to the carbonation of the binder, i.e.,~the presence of lime in ash has reacted with the CO\textsubscript{2} %MDPI: Please confirm if the italics is unnecessary and can be removed. The following highlights are the same. <-- Authors' reply: yea, agree - italics is unnecessary and deleted.
+ in the air and inert CaCO\textsubscript{3} (cf. limestone) has been formed. Previous studies arrived with a better effect from the mixture of lime and fly ash in connection with the stabilization of clayey soil~\cite{ANDAVAN20201125,TOKSOZHOZATLIOGLU2021105931,KHADKA2020100327}. There is no clear answer to the question why the energy fly ash only functions as an inert filler. One reason could be that there is a threshold value of the water binder number. If~ash is to be used in larger projects, the~availability of the 'fresh' ash (i.e., recently made product) should be ensured to minimize possible variations in the stabilized road~base.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Discussion}
@@ -310,8 +311,8 @@ The key idea of our proposed technique is to use various combinations of binder 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \authorcontributions{Supervision, conceptualization, writing---original draft preparation, data curation, methodology, software, visualization, funding acquisition, and~project administration, P.L. (Per Lindh); writing---original draft preparation, methodology, software, formal analysis, resources, validation, writing---review and editing, and~investigation, P.L. (Polina Lemenkova). All authors have read and agreed to the published version of the manuscript.}
 
-\funding{The publication was funded by the Editorial Office of the \emph{\hl{Construction~Materials} %MDPI: Please confirm if the italics is unnecessary and can be removed. 
-}, Multidisciplinary Digital Publishing Institute (MDPI), by~providing 100\% discount for the APC of this manuscript.}
+\funding{The publication was funded by the %MDPI: Please confirm if the italics is unnecessary and can be removed. <-- Authors' reply: ok, not necessary and removed
+Multidisciplinary Digital Publishing Institute (MDPI), by~providing 100\% discount for the APC of this manuscript.}
 
 \institutionalreview{Not applicable.}
 
